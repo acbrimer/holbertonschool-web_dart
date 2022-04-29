@@ -8,5 +8,5 @@ int whoWins(Map<String, int> team1, Map<String, int> team2) {
   if (team1Score == team2Score) {
     return 0;
   }
-  return team1Score < team2Score ? 1 : 2;
+  return team1Score > team2Score ? 1 : 2;
 }
