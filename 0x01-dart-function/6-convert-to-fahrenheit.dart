@@ -1,5 +1,5 @@
 List<double> convertToF(List<double> temperaturesInC) {
   return temperaturesInC
-      .map((c) => double.parse(((c * 9 / 5) + 32).toStringAsFixed(2)))
+      .map((c) => (((c * 9 / 5) + 32) * 100).round() / 100)
       .toList();
 }
