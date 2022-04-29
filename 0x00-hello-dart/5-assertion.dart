@@ -4,14 +4,7 @@ void main(List<String> args) {
    */
   String errorMessage =
       'Uncaught Error: Assertion failed: "The score must be bigger or equal to 80';
-  try {
-    int i = int.parse(args[0]);
-    if (i >= 80) {
-      print('You Passed');
-    } else {
-      print(errorMessage);
-    }
-  } catch (e) {
-    print(errorMessage);
-  }
+  int i = int.parse(args[0]);
+  assert(i >= 80, errorMessage);
+  print('You Passed');
 }
