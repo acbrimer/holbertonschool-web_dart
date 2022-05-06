@@ -1,4 +1,4 @@
-import 'dart:convert';
+import '2-get_user.dart';
 
 Future<String> fetchUser() =>
     // Imagine that this function is
@@ -7,12 +7,6 @@ Future<String> fetchUser() =>
       const Duration(seconds: 2),
       () => throw 'Cannot locate user',
     );
-
-Future<void> getUser() async {
-  try {
-    var userData = await fetchUser();
-    print(jsonDecode(userData)['id']);
-  } catch (e) {
-    print('error caught: ${e}');
-  }
+main() async {
+  getUser();
 }
