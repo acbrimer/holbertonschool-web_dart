@@ -1,4 +1,4 @@
-import 'dart:convert';
+import '1-get_user_id.dart';
 
 Future<String> fetchUserData() => Future.delayed(
       const Duration(seconds: 2),
@@ -6,7 +6,6 @@ Future<String> fetchUserData() => Future.delayed(
           '{"id" : "7ee9a243-01ca-47c9-aa14-0149789764c3", "username" : "admin"}',
     );
 
-Future<String> getUserId() async {
-  var userData = await fetchUserData();
-  return jsonDecode(userData)['id'];
+main() async {
+  print(await getUserId());
 }
